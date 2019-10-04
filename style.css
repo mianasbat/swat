@@ -6,9 +6,9 @@ body {
   height: 100%;
   font-family: sans-serif;
   display: grid;
-  grid-gap: 3px;
+  grid-gap: 5px;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 110px 20px auto 30px auto 50px;
+  grid-template-rows: 110px 20px auto 40px auto 50px;
   grid-template-areas:
   ". . h h h h h h h h . ."
   ". . s s s s s s s s . ."
@@ -75,7 +75,7 @@ body {
 }
 
 .footer {
-  background: black;
+  background: #636563;
   color: white;
   grid-area: f;
 }
