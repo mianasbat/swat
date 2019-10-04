@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  }
+
+.container {
+  height: 100%;
+  font-family: sans-serif;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 110px 20px auto 30px auto 50px;
+  grid-template-areas:
+  ". . h h h h h h h h . ."
+  ". . s s s s s s s s . ."
+  ". . m m c c d d d d . ."
+  ". . . . e e e1 e1 e2 e2 . ."
+  ". . . . g g g1 g1 g2 g2 . ."
+  ". . . . f f f f f f . .";
+}
+
+.header {
+  background: white;
+  padding-left: 50px;
+  color: #2C9744;
+  grid-area: h;
+}
+
+.subtitle {
+  background: #E8E5E4;
+  grid-area: s;
+}
+
+.menu {
+  background: white;
+  grid-area: m;
+}
+.content1 {
+  background: white;
+  grid-area: c;
+}
+
+.content2 {
+  background: white;
+  grid-area: d;
+}
+
+.content3 {
+  background: #2C9744;
+  grid-area: e;
+}
+
+.content4 {
+  background: #2C9744;
+  grid-area: e1;
+}
+
+.content5 {
+  background: #2C9744;
+  grid-area: e2;
+}
+
+.content6 {
+  background: white;
+  grid-area: g;
+}
+
+.content7 {
+  background: white;
+  grid-area: g1;
+}
+
+.content8 {
+  background: white;
+  grid-area: g2;
+}
+
+.footer {
+  background: black;
+  color: white;
+  grid-area: f;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 10s slidy infinite;
+}
